@@ -1,0 +1,29 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Example data
+data = {
+    'Category': ['A', 'B', 'C', 'D', 'E'],
+    'Count': [20, 35, 42, 15, 28]
+}
+
+# Create a DataFrame from the data
+df = pd.DataFrame(data)
+
+# Create a bar chart for a categorical variable
+plt.bar(df['Category'], df['Count'])
+plt.xlabel('Category')
+plt.ylabel('Count')
+plt.title('Distribution of Categories')
+plt.show()
+
+# Example data
+ages = [25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85]
+counts = [10, 15, 25, 30, 40, 50, 45, 35, 20, 15, 10, 5, 2]
+
+# Create a histogram for a continuous variable
+plt.hist(ages, bins=10, weights=counts)
+plt.xlabel('Age')
+plt.ylabel('Count')
+plt.title('Distribution of Ages')
+plt.show()
